@@ -1,0 +1,84 @@
+//see all the data
+###
+GET http://localhost:1234/
+###
+//to insert the data into database
+###
+POST http://localhost:1234/admission
+Content-Type: application/json
+
+{
+    "patientid": 12345,
+    "patientname": "jothinathan1",
+    "age": 21,
+    "bloodgroup": "O+ve",
+    "address": "46 siddhan street",
+    "contact": "8807993608",
+    "issue": "manasuseriillada",
+    "status": "seri panna mudiyala"
+}
+###
+//it is used for disharge by patient name in url
+###
+PUT http://localhost:1234/discharge/jothinathan
+###
+//it is used to filter by issues using  url
+###
+GET http://localhost:1234/givedetails/manasu seri illa da
+###
+//it is used for update status based on issue
+###
+put http://localhost:1234/updatestatus/manasu seri illa da/terminate
+###
+//it is used to delete patient record by age
+###
+DELETE  http://localhost:1234/deletepatient/age/21
+###
+//is is used to delete patient record by status
+###
+DELETE http://localhost:1234/deletepatient/status/terminate
+
+
+
+
+
+
+
+
+
+###
+GET http://localhost:1234/668e5b33ff058e177a1844ac
+
+
+###
+
+GET http://localhost:1234/status/Return
+
+###
+
+PUT http://localhost:1234/
+Content-Type: application/json
+
+{
+    "_id": "668e5b02ff058e177a1844aa",
+    "trackId": 67893433,
+    "receiverName": "Likash",
+    "receiverAddress": "Rasipuram",
+    "receiverContact": 876764646464,
+    "itemName": "Cipla Plus",
+    "itemPrice": 5,
+    "status": "Delivered",
+    "__v": 0
+  }
+
+###
+
+PUT http://localhost:1234/modify
+
+###
+
+DELETE http://localhost:1234/erase/668e5b33ff058e177a1844ac
+
+###
+
+DELETE http://localhost:1234/many/Rasipuram
